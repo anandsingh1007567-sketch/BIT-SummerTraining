@@ -8,13 +8,11 @@ sales = [
     {"product": "Data Analytics Course", "category": "Online Course", "price": 1499, "quantity": 2, "city": "Gorakhpur"},
     {"product": "AI Workshop", "category": "Workshop", "price": 799, "quantity": 1, "city": "Lucknow"},
 ]
-print("="*45)
 ### Question 1: Count Orders
 # Print the total number of sales records.
 # Expected Output:
 # Total orders: 6
 print("Total orders:",len(sales))
-print("="*45)
 
 ### Question 2: Count Units Sold
 
@@ -26,7 +24,6 @@ sold=0
 for item in sales:
     sold+=item["quantity"]
 print("Total units sold:",sold)
-print("="*45)
 
 ### Question 3: Calculate Total Revenue
 
@@ -39,7 +36,6 @@ revenue=0
 for item in sales:
     revenue+=item["quantity"]*item["price"]
 print("Total revenue:",revenue)
-print("="*45)
 
 ### Question 4: Filter Sales by City
 
@@ -52,7 +48,6 @@ for item in sales:
     if item["city"]=="Gorakhpur":
         revenue+=item["price"]*item["quantity"]
 print("Gorakhpur revenue:",revenue)
-print("="*45)
 
 ### Question 5: Revenue by Category
 
@@ -72,7 +67,6 @@ for item in sales:
         revenue_category[category] = revenue
 
 print(revenue_category)
-print("="*45)
 
 ### Question 6: Revenue by City
 
@@ -91,7 +85,6 @@ for item in sales:
     else:
         revenue_city[city] = revenue
 print(revenue_city)
-print("="*45)
 
 ### Question 7: Best-Selling Product by Revenue
 
@@ -106,7 +99,6 @@ for item in sales:
     product_revenue[product] = product_revenue.get(product, 0) + revenue
 top_product = max(product_revenue, key=product_revenue.get)
 print("Top product:", top_product)
-print("="*45)
 
 ### Question 8: High-Volume Products
 
@@ -120,4 +112,3 @@ for item in sales:
         if item["product"] not in list1:
             list1.append(item["product"])
 print(list1)
-print("="*45)
